@@ -11,9 +11,15 @@ namespace Consol
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
+            Random random = new Random();
             string consolComand;
             bool isOpen = true;
+
+            const string ComandShowHello = "1"; 
+            const string ComandShowInfo = "2"; 
+            const string ComandShowRandomNumber = "3"; 
+            const string ComandConsolClear = "4"; 
+            const string ComandExit = "5"; 
 
             Console.WriteLine("1. Вывести приветствие.\n \n" +
                 "2. Вывести инофрмацю.\n \n" +
@@ -28,19 +34,20 @@ namespace Consol
                 consolComand = Console.ReadLine();
                 switch (consolComand)
                 {
-                    case "1":
+                    case ComandShowHello:
                         Console.WriteLine("Привет");
                         break;
-                    case "2":
+                    case ComandShowInfo:
                         Console.WriteLine("Некая информация");
                         break;
-                    case "3":
-                        Console.WriteLine(rand.Next(0, 100));
+                    case ComandShowRandomNumber:
+                        random.Next(0, 100);
+                        Console.WriteLine(random);
                         break;
-                    case "4":
+                    case ComandConsolClear:
                         Console.Clear();
                         break;
-                    case "5":
+                    case ComandExit:
                         Console.WriteLine("До свидание.");
                         isOpen = false;
                         break;
