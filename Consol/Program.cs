@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Consol
 {
@@ -13,6 +8,7 @@ namespace Consol
         {
             Random random = new Random();
             string consolComand;
+            int randomNumber;
             bool isOpen = true;
 
             const string ComandShowHello = "1"; 
@@ -41,8 +37,8 @@ namespace Consol
                         Console.WriteLine("Некая информация");
                         break;
                     case ComandShowRandomNumber:
-                        random.Next(0, 100);
-                        Console.WriteLine(random);
+                        randomNumber = random.Next(0, 100);
+                        Console.WriteLine(randomNumber);
                         break;
                     case ComandConsolClear:
                         Console.Clear();
